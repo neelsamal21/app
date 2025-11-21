@@ -11,6 +11,9 @@ export default function NavBar()
                 <Link href = "/" className="hover:underline hover:text-gray-200 transition-colors">
                     Home
                 </Link>
+                <Link href = "/thoughts" className = "hover:underline hover:text-gray-200 transition-colors">
+                    Thoughts
+                </Link>
             </div>
         </nav>
     );
