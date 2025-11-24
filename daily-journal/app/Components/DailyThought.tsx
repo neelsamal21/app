@@ -2,12 +2,25 @@
 "use client";
 import React, {useState, useEffect } from "react";
 
+type  Thought ={
+    text:string;
+    time:string;
+    competencies: number[];
+};
+type Competency =  {
+    id:number;
+    skill:string;
+    description:string;
+}
+
+
+
 export default function DailyThought()
 {
     //Input is the variable and setInput updates the variable 
     const [input,setInput] = useState("");
     const [thoughts,setThoughts] = useState<{text:string, time:string}[]>([]);
-    
+    useState<Thought[]>([]);
     //Load thoughts rom localStrorage on page load
     useEffect(()=> {
         const savedThoughts = localStorage.getItem("dailyThoughts");
